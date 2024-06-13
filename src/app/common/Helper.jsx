@@ -1,4 +1,4 @@
-import { Discord, Linkdin, Telegram, Twiter } from "./icon.jsx";
+import { Discord, Linkdin, Telegram, Twiter } from "./icon";
 
 export const TechniqueData = [
   { url: "https://www.linkedin.com/login", icon: <Linkdin /> },

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import myImage from "../assets/images/svg/footerLogo.svg";
 import { TechniqueData, quickLinks } from "../common/Helper";
 
 const Footer = () => {
@@ -21,20 +20,19 @@ const Footer = () => {
       console.log("Form submitted", formdata);
     }
   };
-
   return (
     <div className="bg-white">
       <div className="container max-w-[1164px] px-6 xl:px-3 mx-auto pt-20 pb-[45px]">
         <div className="flex-row flex -mx-3 flex-wrap justify-between">
           <div className="w-full lg:w-5/12 ">
             <Image
-              src={myImage}
+              src="/assets/images/svg/footerLogo.svg"
               alt="My Image"
               width={290}
               height={53}
-              className="mb-4"
+              className="mb-4 cursor-pointer"
             />
-            <p className="font-normal text-base leading-6 font-poppins max-w-[412px] text-blackPrimary opacity-70 mb-6">
+            <p className="font-normal text-base leading-6 font-poppins max-w-[427px] text-blackPrimary opacity-70 mb-6">
               Galileo Sky, founded by industry experts, is redefining the gaming
               landscape. With a blend of groundbreaking technology and immersive
               entertainment, we create world-class gaming experiences and
@@ -72,12 +70,12 @@ const Footer = () => {
               </div>
               <div className="w-full sm:w-1/2 md:w-8/12 ">
                 <p className="text-base font-normal leading-6 font-poppins mb-4 text-blackPrimary">
-                  Quick Links
+                  Get Connected{" "}
                 </p>
                 <form
                   onSubmit={submit}
                   className={`${
-                    formerror.email && "!border-tamarillo"
+                    formerror.email && "border-tamarillo"
                   } border border-transparent bg-alto gap-2 max-w-[347px] p-[7px] relative z-[1] rounded-[10px] flex justify-between items-center mt-4`}
                 >
                   <label htmlFor="email"></label>
@@ -91,7 +89,7 @@ const Footer = () => {
                     placeholder="Email Here"
                   />
                   {formerror.email && (
-                    <p className="absolute -top-6 text-tamarillo left-0">
+                    <p className="absolute -bottom-6 text-darkRed  left-0">
                       {formerror.email}
                     </p>
                   )}

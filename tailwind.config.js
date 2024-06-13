@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xxl2: "99px",
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         poppins: ["Inter", "sans-serif"],
@@ -15,11 +18,12 @@ module.exports = {
         whitePrimary: "#FEFEFE",
         offwhite: "#ffffff0f",
         blackPrimary: "#010101",
+        navBlur: "#fefefe2b",
         grayPrimary: "#D2D2D2",
         gray: "#444444",
         tundora: "#4C4C4C",
         darkRed: "#96151D",
-        cinnabar: "#EB484C",
+        redSecondary: "#EB484C",
         alto: "#DFDEDE",
       },
     },
