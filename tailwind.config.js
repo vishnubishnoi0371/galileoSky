@@ -20,11 +20,11 @@ module.exports = {
         blackPrimary: "#010101",
         navBlur: "#fefefe2b",
         grayPrimary: "#D2D2D2",
+        graySecondary: "#f7f7f7",
         gray: "#444444",
-        tundora: "#4C4C4C",
         darkRed: "#96151D",
         redSecondary: "#EB484C",
-        alto: "#DFDEDE",
+      
       },
     },
   },

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { TechniqueData, quickLinks } from "../common/Helper";
+import Link from "next/link";
 
 const Footer = () => {
   const [formdata, setFormdata] = useState({ email: "" });
@@ -21,9 +22,9 @@ const Footer = () => {
     }
   };
   return (
-    <div className="bg-white">
-      <div className="container max-w-[1164px] px-6 xl:px-3 mx-auto pt-20 pb-[45px]">
-        <div className="flex-row flex -mx-3 flex-wrap justify-between">
+    <div className="bg-graySecondary">
+      <div className="container max-w-[1164px] px-6 xl:px-3 mx-auto pt-[84px] pb-[45px]">
+        <div className="flex-row flex  flex-wrap justify-between">
           <div className="w-full lg:w-5/12 ">
             <Image
               src="/assets/images/svg/footerLogo.svg"
@@ -40,7 +41,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4 items-center pb-10 lg:pb-0">
               {TechniqueData.map((item, i) => (
-                <a
+                <Link
                   key={i}
                   href={item.url}
                   target="_blank"
@@ -48,7 +49,7 @@ const Footer = () => {
                   className="w-9 h-9 hover:shadow-[0px_7px_14.3px_0px_lightPink] duration-300  border border-darkRed rounded-full flex justify-center items-center"
                 >
                   {item.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
