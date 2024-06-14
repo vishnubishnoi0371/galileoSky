@@ -132,6 +132,26 @@ export const Telegram = () => {
   );
 };
 
+export const WhiteLineSvg = () => {
+  return (
+<svg width="248" height="70" viewBox="0 0 248 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="134" y1="7" x2="247.04" y2="7" stroke="white" stroke-width="2"/>
+<g opacity="0.5">
+<rect x="-5.08105" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="15.8379" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="36.7568" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="57.6755" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="26.2971" y="28.8235" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="47.2163" y="28.8235" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="36.7568" y="53.5294" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="15.8379" y="53.5294" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="68.1353" y="28.8235" width="13.9459" height="16.4706" fill="#EB484C"/>
+<rect x="89.054" y="28.8235" width="13.9459" height="16.4706" fill="#EB484C"/>
+</g>
+</svg>
+
+  );
+};
 export const RedBox = () => {
   return (
     <svg width="113" height="54" viewBox="0 0 113 54" fill="none" xmlns="http://www.w3.org/2000/svg">

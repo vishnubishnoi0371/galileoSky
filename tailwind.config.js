@@ -12,7 +12,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        poppins: ["Inter", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       colors: {
         whitePrimary: "#FEFEFE",
@@ -22,6 +22,7 @@ module.exports = {
         grayPrimary: "#D2D2D2",
         graySecondary: "#f7f7f7",
         gray: "#444444",
+        grayDark: "#dfdede",
         darkRed: "#96151D",
         redSecondary: "#EB484C",
       

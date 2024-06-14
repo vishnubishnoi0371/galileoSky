@@ -58,7 +58,7 @@ const GalileoNav = () => {
         <div
           className={`${
             first ? "right-0 bg-black" : "right-[-100%]"
-          } flex gap-3 sm:gap-6 max-md:w-full max-md:h-full max-md:top-0 fixed bg-navBg max-md:bg-black max-md:backdrop-blur-[20px] top-0 max-md:pt-[120px] justify-center items-center md:h-unset md:static md:bg-transparent z-[70] transition-all ease-linear flex-col md:flex-row duration-300 px-6 md:px-0`}
+          } flex gap-3 sm:gap-6 max-md:w-full max-md:h-screen max-md:top-0 max-md:fixed bg-navBg max-md:bg-black max-md:backdrop-blur-[20px] top-0 max-md:pt-[120px] justify-center items-center md:bg-transparent z-[70] transition-all ease-linear flex-col md:flex-row duration-300 px-6 md:px-0`}
         >
           <div className="relative inline-block text-left">
             <Link
@@ -71,12 +71,12 @@ const GalileoNav = () => {
             >
               Games
               <ArrowIcon
-                className={`${isOpen ? "rotate-180 duration-300" : ""}`}
+                className={`${isOpen ? "rotate-180" : ""} duration-300`}
               />
             </Link>
             {isOpen && (
               <div
-                className="origin-top-right absolute left-0 mt-2 w-[70px] rounded-md shadow-lg bg-grayPrimary ring-1 text-blackPrimary ring-opacity-5 focus:outline-none"
+                className="absolute left-0 mt-2 w-[70px] rounded-md shadow-lg origin-top-right ring-1 bg-grayPrimary text-blackPrimary ring-opacity-5 focus:outline-none"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"

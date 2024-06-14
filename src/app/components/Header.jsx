@@ -3,7 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import GalileoNav from "./GalileoNav";
 import { HeroSocialIconArray } from "../common/Helper";
 import Link from "next/link";
-import { RedBox } from "../common/Icon";
+import { RedBox, WhiteLineSvg } from "../common/Icon";
+import Image from "next/image";
 
 const Header = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -12,8 +13,8 @@ const Header = () => {
 
   const videos = [
     "/assets/videos/nextVideo.mp4",
-    "/assets/videos/headerVideoSecond.mp4",
     "/assets/videos/headerVideo.mp4",
+    "/assets/videos/headerVideoSecond.mp4",
   ];
 
   useEffect(() => {
@@ -44,13 +45,25 @@ const Header = () => {
         playsInline
         className="w-full h-full object-cover absolute inset-0"
       />
-      <div className="min-h-screen relative flex flex-col">
+      <div className="min-h-screen  backdrop:blur-[10px] relative flex flex-col">
         <div className="relative z-50">
           <GalileoNav />
         </div>
-        <div className="flex-grow flex justify-center items-center relative">
+        <div className="flex-grow container mx-auto  flex justify-center items-center relative">
           <div className="text-center">
-            <p className=" text-3xl md:text-5xl  xl:text-xxl2 font-normal relative z-40 text-whitePrimary mb-4 md:leading-10 xl:leading-[99px]">
+            <div className="relative flex justify-center pb-2.5">
+              <Image
+                src="/assets/images/webp/futureBg.webp"
+                alt="My Image"
+                width={240}
+                height={43}
+                className="mb-4 cursor-pointer"
+              />
+              <p className="absolute bottom-9 text-sm font-medium font-inter text-whitePrimary">
+                Future of Gaming
+              </p>
+            </div>
+            <p className="text-3xl md:text-5xl xl:text-xxl2 font-normal relative z-40 text-whitePrimary mb-4 md:leading-10 xl:leading-[99px]">
               BEYOND <br />
               <span className="text-redSecondary">ENTERTAINMENT</span>
             </p>
@@ -58,17 +71,30 @@ const Header = () => {
               Galileo Sky, founded by industry experts, is redefining the gaming
               landscape. With a blend of groundbreaking technology and immersive
               entertainment, we create world-class gaming experiences and
-              thriving digital economies that captivate and inspire
+              thriving digital economies that captivate and inspire.
             </p>
+          </div>
+          <div className="flex md:flex-col items-center gap-6 h-20 absolute max-md:justify-center md:left-0 max-md:bottom-[20%] md:top-[38%] translate-y-[50%] space-y-2.5 md:space-y-2.5">
+            {videos.map((_, index) => (
+              <span
+                key={index}
+                className={`w-5 h-3 rounded-[21px] ${
+                  index === presentVideo
+                    ? "bg-redSecondary w-[47px]"
+                    : "bg-grayDark"
+                } cursor-pointer md:rotate-90`}
+                onClick={() => setCurrentVideo(index)}
+              ></span>
+            ))}
           </div>
         </div>
         <div
           className={`${
             sidebar ? "max-lg:right-0" : ""
-          } absolute  bg-navBlur backdrop:blur-[1.5px] flex justify-center py-[70px] px-[22px] z-20 max-lg:-right-[68px] duration-300 lg:right-0 top-[30%] w-[68px] h-[368px] flex-col gap-7 `}
+          } absolute bg-gray md:bg-navBlur backdrop:blur-[1.5px] flex justify-center py-[70px] px-[22px] z-20 max-lg:-right-[68px] duration-300 lg:right-0 top-[30%] w-[68px] h-[368px] flex-col gap-7`}
         >
           <span
-            className="bg-white absolute top-[30%] -left-[15px] w-[15px] h-[145px] rounded-[30px_0_0_30px]"
+            className="bg-white absolute top-[30%] -left-[15px] w-3 sm:w-[15px] h-[145px] rounded-[30px_0_0_30px] cursor-pointer"
             onClick={() => setSidebar(!sidebar)}
           ></span>
           {HeroSocialIconArray.map((obj, index) => (
@@ -81,10 +107,13 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        <span className="left-5 absolute bottom-4">
-          <RedBox />
-        </span>
       </div>
+      <span className="left-5 absolute top-[16%]">
+        <WhiteLineSvg />
+      </span>
+      <span className="right-14 absolute bottom-14">
+        <RedBox />
+      </span>
     </div>
   );
 };
