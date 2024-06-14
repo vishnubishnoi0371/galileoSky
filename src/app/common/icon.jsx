@@ -42,8 +42,8 @@ export const HeroTelegram = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M26.9045 6.49264C27.2323 6.35129 27.5912 6.30255 27.9437 6.35147C28.2962 6.40039 28.6295 6.54519 28.9088 6.7708C29.1881 6.99641 29.4033 7.29458 29.532 7.63428C29.6606 7.97398 29.698 8.34278 29.6403 8.70231L26.6311 27.3976C26.3392 29.2009 24.4075 30.2351 22.7928 29.3368C21.4421 28.5853 19.436 27.4274 17.6316 26.2193C16.7294 25.6146 13.9657 23.6781 14.3054 22.3001C14.5972 21.1219 19.241 16.6944 21.8945 14.0621C22.9361 13.0279 22.4611 12.4313 21.2311 13.3826C18.1769 15.7445 13.2731 19.3362 11.6518 20.3473C10.2215 21.2387 9.47587 21.3909 8.58427 21.2387C6.95764 20.9615 5.44909 20.5321 4.21784 20.0089C2.55405 19.3022 2.63499 16.9594 4.21651 16.2772L26.9045 6.49264Z"
         fill="#FEFEFE"
       />
@@ -123,8 +123,8 @@ export const Telegram = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M14.3427 2.09578C14.5394 2.01097 14.7547 1.98172 14.9662 2.01107C15.1777 2.04043 15.3777 2.12731 15.5453 2.26267C15.7129 2.39804 15.842 2.57694 15.9192 2.78076C15.9964 2.98458 16.0188 3.20587 15.9842 3.42158L14.1787 14.6387C14.0035 15.7207 12.8445 16.3412 11.8757 15.8023C11.0653 15.3514 9.8616 14.6567 8.77895 13.9318C8.23763 13.5689 6.57942 12.407 6.78321 11.5802C6.95834 10.8733 9.74458 8.21681 11.3367 6.63743C11.9616 6.01693 11.6766 5.65898 10.9387 6.22974C9.10614 7.64686 6.16387 9.80191 5.19107 10.4085C4.33291 10.9434 3.88552 11.0348 3.35056 10.9434C2.37458 10.7771 1.46945 10.5194 0.730701 10.2055C-0.267568 9.78152 -0.219008 8.37581 0.729905 7.96649L14.3427 2.09578Z"
         fill="#96151D"
       />
@@ -134,33 +134,104 @@ export const Telegram = () => {
 
 export const WhiteLineSvg = () => {
   return (
-<svg width="248" height="70" viewBox="0 0 248 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="134" y1="7" x2="247.04" y2="7" stroke="white" stroke-width="2"/>
-<g opacity="0.5">
-<rect x="-5.08105" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="15.8379" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="36.7568" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="57.6755" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="26.2971" y="28.8235" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="47.2163" y="28.8235" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="36.7568" y="53.5294" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="15.8379" y="53.5294" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="68.1353" y="28.8235" width="13.9459" height="16.4706" fill="#EB484C"/>
-<rect x="89.054" y="28.8235" width="13.9459" height="16.4706" fill="#EB484C"/>
-</g>
-</svg>
-
+    <svg
+      width="248"
+      height="70"
+      viewBox="0 0 248 70"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="134"
+        y1="7"
+        x2="247.04"
+        y2="7"
+        stroke="white"
+        strokeWidth="2"
+      />
+      <g opacity="0.5">
+        <rect x="-5.08105" width="13.9459" height="16.4706" fill="#EB484C" />
+        <rect x="15.8379" width="13.9459" height="16.4706" fill="#EB484C" />
+        <rect x="36.7568" width="13.9459" height="16.4706" fill="#EB484C" />
+        <rect x="57.6755" width="13.9459" height="16.4706" fill="#EB484C" />
+        <rect
+          x="26.2971"
+          y="28.8235"
+          width="13.9459"
+          height="16.4706"
+          fill="#EB484C"
+        />
+        <rect
+          x="47.2163"
+          y="28.8235"
+          width="13.9459"
+          height="16.4706"
+          fill="#EB484C"
+        />
+        <rect
+          x="36.7568"
+          y="53.5294"
+          width="13.9459"
+          height="16.4706"
+          fill="#EB484C"
+        />
+        <rect
+          x="15.8379"
+          y="53.5294"
+          width="13.9459"
+          height="16.4706"
+          fill="#EB484C"
+        />
+        <rect
+          x="68.1353"
+          y="28.8235"
+          width="13.9459"
+          height="16.4706"
+          fill="#EB484C"
+        />
+        <rect
+          x="89.054"
+          y="28.8235"
+          width="13.9459"
+          height="16.4706"
+          fill="#EB484C"
+        />
+      </g>
+    </svg>
   );
 };
 export const RedBox = () => {
   return (
-    <svg width="113" height="54" viewBox="0 0 113 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <line x1="67" y1="42" x2="112" y2="42" stroke="white" stroke-width="2"/>
-    <rect opacity="0.4" y="32.1177" width="17.9459" height="21.4118" fill="#EB484C"/>
-    <rect opacity="0.4" x="67.2969" width="17.9459" height="21.4118" fill="#EB484C"/>
-    <rect opacity="0.4" x="94.2168" width="17.9459" height="21.4118" fill="#EB484C"/>
+    <svg
+      width="113"
+      height="54"
+      viewBox="0 0 113 54"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line x1="67" y1="42" x2="112" y2="42" stroke="white" strokeWidth="2" />
+      <rect
+        opacity="0.4"
+        y="32.1177"
+        width="17.9459"
+        height="21.4118"
+        fill="#EB484C"
+      />
+      <rect
+        opacity="0.4"
+        x="67.2969"
+        width="17.9459"
+        height="21.4118"
+        fill="#EB484C"
+      />
+      <rect
+        opacity="0.4"
+        x="94.2168"
+        width="17.9459"
+        height="21.4118"
+        fill="#EB484C"
+      />
     </svg>
-    
   );
 };
 
@@ -185,7 +256,6 @@ export const Twiter = () => {
     </svg>
   );
 };
-
 
 export const ArrowIcon = ({ className }) => {
   return (

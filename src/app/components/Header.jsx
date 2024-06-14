@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import GalileoNav from "./GalileoNav";
-import { HeroSocialIconArray } from "../common/Helper";
+import { HeroSocialLinks } from "../common/Helper";
 import Link from "next/link";
 import { RedBox, WhiteLineSvg } from "../common/Icon";
 import Image from "next/image";
@@ -35,8 +35,36 @@ const Header = () => {
     }
   }, [presentVideo]);
 
+  const [toggle, setToggle] = useState(false);
+  const scrollToSection = (elementId) => {
+    const element = document.getElementById(elementId);
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
+
+  const handleToggleClick = () => {
+    setToggle((prevToggle) => !prevToggle);
+    if (toggle) {
+      scrollToSection("header");
+    } else {
+      scrollToSection("footer");
+    }
+  };
+
   return (
-    <div className="relative overflow-hidden">
+    <div id="header" className="relative overflow-hidden">
+      <div className="absolute z-50 -translate-x-1/2 bottom-10 left-1/2">
+        <button
+          onClick={handleToggleClick}
+          className={`flex w-10 sm:w-11 h-[72px] sm:h-[76px] rounded-full border border-redSecondary relative after:absolute sm:after:w-[27px] after:w-[22px] after:h-[27px] after:rounded-full after:bg-redSecondary after:duration-300 after:left-1/2 after:-translate-x-1/2 ${
+            toggle ? "after:top-9" : "after:top-2"
+          }`}
+        ></button>
+      </div>
+      <span className="w-full h-full backdrop-blur-lg absolute top-0 left-auto"></span>
       <video
         id="backvideo"
         ref={videoRef}
@@ -45,11 +73,11 @@ const Header = () => {
         playsInline
         className="w-full h-full object-cover absolute inset-0"
       />
-      <div className="min-h-screen  backdrop:blur-[10px] relative flex flex-col">
+      <div className="min-h-screen backdrop:blur-[10px] relative flex flex-col">
         <div className="relative z-50">
           <GalileoNav />
         </div>
-        <div className="flex-grow container mx-auto  flex justify-center items-center relative">
+        <div className="flex-grow container mx-auto flex justify-center items-center relative">
           <div className="text-center">
             <div className="relative flex justify-center pb-2.5">
               <Image
@@ -63,7 +91,7 @@ const Header = () => {
                 Future of Gaming
               </p>
             </div>
-            <p className="text-3xl md:text-5xl xl:text-xxl2 font-normal relative z-40 text-whitePrimary mb-4 md:leading-10 xl:leading-[99px]">
+            <p className="text-3xl Hebrew md:text-5xl xl:text-xxl2 font-normal relative z-40 text-whitePrimary mb-4 md:leading-10 xl:leading-[99px]">
               BEYOND <br />
               <span className="text-redSecondary">ENTERTAINMENT</span>
             </p>
@@ -74,7 +102,7 @@ const Header = () => {
               thriving digital economies that captivate and inspire.
             </p>
           </div>
-          <div className="flex md:flex-col items-center gap-6 h-20 absolute max-md:justify-center md:left-0 max-md:bottom-[20%] md:top-[38%] translate-y-[50%] space-y-2.5 md:space-y-2.5">
+          <div className="flex md:flex-col max-md:items-baseline items-center gap-6 h-20 absolute max-md:justify-center md:left-0 max-md:bottom-[20%] md:top-[38%] translate-y-[50%] space-y-2.5 md:space-y-2.5">
             {videos.map((_, index) => (
               <span
                 key={index}
@@ -97,7 +125,7 @@ const Header = () => {
             className="bg-white absolute top-[30%] -left-[15px] w-3 sm:w-[15px] h-[145px] rounded-[30px_0_0_30px] cursor-pointer"
             onClick={() => setSidebar(!sidebar)}
           ></span>
-          {HeroSocialIconArray.map((obj, index) => (
+          {HeroSocialLinks.map((obj, index) => (
             <Link
               key={index}
               href={obj.url}
@@ -114,6 +142,7 @@ const Header = () => {
       <span className="right-14 absolute bottom-14">
         <RedBox />
       </span>
+      <div id="footer"></div>
     </div>
   );
 };

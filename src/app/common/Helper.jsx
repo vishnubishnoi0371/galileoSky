@@ -7,7 +7,7 @@ import {
   Linkdin,
   Telegram,
   Twiter,
-} from "../common/Icon";
+} from "./Icon";
 
 export const TechniqueData = [
   { url: "https://www.linkedin.com/login", icon: <Linkdin /> },
@@ -24,7 +24,7 @@ export const quickLinks = [
   { name: "Careers", url: "/careers" },
   { name: "Privacy Policy", url: "/privacy-policy" },
 ];
-export const HeroSocialIconArray = [
+export const HeroSocialLinks = [
   { socialIcon: <HeroTwiter />, url: "https://x.com/i/flow/login" },
   { socialIcon: <HeroDiscord />, url: "https://discord.com/" },
   { socialIcon: <HeroTelegram />, url: "https://web.telegram.org/k/" },

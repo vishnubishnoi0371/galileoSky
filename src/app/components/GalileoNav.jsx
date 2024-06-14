@@ -6,10 +6,14 @@ import Image from "next/image";
 
 const GalileoNav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [first, setfirst] = useState(false);
+  const [first, setFirst] = useState(false);
 
-  function setopen() {
-    setfirst(!first);
+  function toggleNav() {
+    setFirst(!first);
+  }
+
+  function handleLinkClick() {
+    setIsOpen(false); // Close the dropdown when a link is clicked
   }
 
   useEffect(() => {
@@ -38,7 +42,7 @@ const GalileoNav = () => {
           </Link>
           <button
             aria-label="navshow"
-            onClick={setopen}
+            onClick={toggleNav}
             className="md:hidden relative z-[72]"
           >
             {first ? (
@@ -89,6 +93,7 @@ const GalileoNav = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-0"
+                    onClick={handleLinkClick}
                   >
                     Link1
                   </Link>
@@ -98,6 +103,7 @@ const GalileoNav = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-1"
+                    onClick={handleLinkClick}
                   >
                     Link2
                   </Link>
@@ -107,8 +113,9 @@ const GalileoNav = () => {
                     role="menuitem"
                     tabIndex="-1"
                     id="menu-item-2"
+                    onClick={handleLinkClick}
                   >
-                    Link3{" "}
+                    Link3
                   </Link>
                 </div>
               </div>
