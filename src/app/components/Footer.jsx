@@ -7,6 +7,7 @@ import Link from "next/link";
 const Footer = () => {
   const [formdata, setFormdata] = useState({ email: "" });
   const [formerror, setFormerror] = useState({ email: "" });
+  const [showPopup, setShowPopup] = useState(false); // State for showing/hiding the popup
 
   const inputFill = (e) => {
     setFormdata({ ...formdata, [e.target.name]: e.target.value });
@@ -19,10 +20,14 @@ const Footer = () => {
     } else {
       setFormerror({ email: "" });
       console.log("Form submitted", formdata);
+      setShowPopup(true);
       setFormdata({ email: "" });
     }
   };
 
+  const closePopup = () => {
+    setShowPopup(false);
+  };
   return (
     <div className="bg-graySecondary">
       <div className="container max-w-[1164px] px-3 mx-auto pt-10 md:pt-20 pb-8 md:pb-10">
@@ -115,6 +120,19 @@ const Footer = () => {
       <p className="text-center text-sm sm:text-base text-blackPrimary opacity-70 py-6 border-t border-grayPrimary">
         ©{new Date().getFullYear()} Copyrights Galileo Sky, All Rights Reserved
       </p>
+      {showPopup && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[9999]"
+          onClick={closePopup}
+        >
+          <div className="bg-white p-8 rounded-lg max-w-md">
+            <h2 className="text-2xl font-bold mb-4">Thank you!</h2>
+            <p className="text-lg">
+              Your email has been submitted successfully.
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
